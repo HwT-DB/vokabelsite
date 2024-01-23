@@ -1,0 +1,37 @@
+.lang{
+    width: 98%;
+    height: 98%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+}
+
+
+.eng{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 2%;
+
+    background-image: url(/pics/UnionJack.png);
+    background-size: 250px;
+    border-radius: 15px;
+}
+
+.esp{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 2%;
+
+    background-image: url(/pics/UnionJack.png);
+    background-size: 250px;
+    border-radius: 15px;
+}
