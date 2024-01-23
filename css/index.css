@@ -1,3 +1,12 @@
+.main{
+    width: 98%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+}
+
+
 .lang{
     width: 98%;
     height: 98%;
@@ -15,7 +24,6 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 2%;
 
     background-image: url(/pics/UnionJack.png);
     background-size: 250px;
@@ -29,9 +37,28 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 2%;
 
-    background-image: url(/pics/UnionJack.png);
-    background-size: 250px;
+
+    background-image: url(/pics/Spanishflag.svg);
+    background-size: 375px;
     border-radius: 15px;
 }
+
+/**
+Expansion languages
+
+.lat{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+    background-image: url(/pics/);
+    background-size: px;
+    border-radius: 15px;
+}
+
+**/
