@@ -1,0 +1,95 @@
+@import url(./style.css);
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 12px;
+    text-align: center;
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .3s;
+}
+
+.back:hover, .back:focus {
+    padding: 8px 30px;
+    letter-spacing: 2px;
+}
+
+.box {
+    width: 500px;
+}
+
+.box h1 {
+    text-align: center;
+    color: #ccc;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.box .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.box .inputs select {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 40%;
+    padding: 10px 3px;
+    font-size: 16px;
+    border: 4px solid #ccc;
+    background: #fff;
+    border-radius: 12px 0;
+    outline: 0;
+    transition: all .5s;
+}
+.box .inputs select:nth-child(2) {
+    border-radius: 0 12px;
+}
+
+.box .inputs select:nth-child(1):hover, .box .inputs select:nth-child(1):focus {
+    border-radius: 0 12px;
+}
+.box .inputs select:nth-child(2):hover, .box .inputs select:nth-child(2):focus {
+    border-radius: 12px 0;
+}
+.box .inputs select:disabled:nth-child(2):hover {
+    border-radius: 0 12px;
+}
+
+.box button {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    width: 200px;
+    padding: 9px 0;
+    outline: 0;
+    background: #fff;
+    border: 4px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .4s ease-in-out;
+}
+
+.box button:hover, .box button:focus {
+    width: 280px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}

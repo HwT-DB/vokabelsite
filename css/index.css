@@ -1,65 +1,45 @@
+@import url(./style.css);
+
 .main{
-    width: 98%;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    display: flex;
     margin-top: 12px;
+}
+
+.main .title {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
 }
 
 
 .lang{
-    width: 98%;
-    height: 98%;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    position: absolute;
+    flex-wrap: wrap;
 }
 
+.lang a {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 2%;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+}
+
+.lang a:hover, .lang a:focus {
+    transform: scale(1.05);
+}
 
 .eng{
-    width: 250px;
-    height: 250px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
-    background-image: url(/pics/UnionJack.png);
-    background-size: 250px;
-    border-radius: 15px;
+    background-image: url(../pics/UnionJack.png);
 }
-
 .esp{
-    width: 250px;
-    height: 250px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
-
-    background-image: url(/pics/Spanishflag.svg);
-    background-size: 375px;
-    border-radius: 15px;
+    background-image: url(../pics/Spanishflag.svg);
 }
-
-/**
-Expansion languages
-
-.lat{
-    width: 250px;
-    height: 250px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
-
-    background-image: url(/pics/);
-    background-size: px;
-    border-radius: 15px;
-}
-
-**/
