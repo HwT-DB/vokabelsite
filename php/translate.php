@@ -6,6 +6,10 @@
 
         "tasks_eng" => "Exercises",
         "tasks_esp" => "Ejercicios",
+
+        "translate_eng" => "Translate",
+
+        "lang_eng" => "englisch",
     ];
 
 ?>

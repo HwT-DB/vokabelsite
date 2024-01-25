@@ -31,6 +31,7 @@
     margin: 2%;
     background-size: cover;
     transition: all .3s ease-in-out;
+    background-repeat: no-repeat;
 }
 
 .lang a:hover, .lang a:focus {
@@ -40,10 +41,7 @@
 .eng{
     background-image: url(../pics/UnionJack.png);
 }
-.esp{
-    background-image: url(../pics/Spanishflag.svg);
-}
-.esp6{
+.esp, .esp6{
     background-image: url(../pics/Spanishflag.svg);
 }
 .lat{
