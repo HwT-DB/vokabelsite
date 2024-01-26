@@ -14,14 +14,17 @@
             case 'lang':
                 $lang = $value;
                 break;
-            // case 'grade':
-            //     $grade = $value;
-            //     break;
-            // case 'unit':
-            //     $unit = $value;
-            //     break;
+            case 'grade':
+                $grade = $value;
+                break;
+            case 'unit':
+                $unit = $value;
+                break;
         }
-}
+    }
+    if(empty($lang) || empty($grade) || empty($unit)) {
+        header("location: ./index.html");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -39,12 +42,19 @@
     <div class="box">
         <p><b>HELFEN:</b><br>Übersetzen Sie die Wörter ins Deutsche bzw. aus dem Deutschen in die Sprache Ihrer Wahl<hr></p>
         <p><b>Sprache: <?php echo $translate['lang_' . $lang] ?></b></p>
-        <input type="text" value="Szóóó" disabled>
+        <input type="text" id="word" value="Szóóó" disabled>
         <hr>
         <input type="text" id="translate" placeholder="<?php echo $translate['translate_' . $lang]; ?>...">
         <br>
-        <button onclick="Check(document.getElementById('translate').value)">Check</button>
+        <h3 id="errors">1/2</h3>
+        <button id="check" onclick="Check(document.getElementById('translate').value)">Check</button>
+        <button id="continue" class="hide" onclick="Continue()">&gt; Continue &gt;</button>
     </div>
 </body>
+    <script>
+        let l = "<?php echo $lang; ?>";
+        let g = <?php echo $grade; ?>;
+        let u = <?php echo $unit; ?>;
+    </script>
     <script src="./js/learn.js"></script>
 </html>
