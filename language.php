@@ -1,7 +1,16 @@
+<?php
+    include_once "./php/config.php";
+    include_once "./php/translate.php";
+    $lang = mysqli_real_escape_string($conn, $_GET['lang']);
+    if(empty($lang)) {
+        header("location: ./index.html");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../css/langs.css">
+        <link rel="stylesheet" href="./css/langs.css">
         <title>
             Vocab - English
         </title>
@@ -11,13 +20,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <a href="../index.html" class="back">&lt; Zurück</a>
+        <a href="./index.html" class="back">&lt; Zurück</a>
         <div class="box">
             <h1>Choose a grade and a unit!</h1>
             <hr>
             <div class="inputs">
                 <select id="grade">
                     <option value="def" selected hidden>Choose a grade...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                     <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
@@ -29,5 +43,8 @@
             <button onclick="Run(parseInt(document.getElementById('grade').value), document.getElementById('unit').value)">Start learning!</button>
         </div>
     </body>
-    <script src="fr.js"></script>
+    <script>
+        let l = "<?php echo $lang; ?>";
+    </script>
+    <script src="./js/language.js"></script>
 </html>
