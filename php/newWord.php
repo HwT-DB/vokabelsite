@@ -15,7 +15,7 @@
             }
             $count = count($list) - 1;
             $rand2 = mt_rand(0, $count);
-            echo $rand1 . $list[$rand2];
+            echo '{"type": "'. $rand1 .'", "word": "'. $list[$rand2] .'"}';
         } else {
             echo "err";
         }

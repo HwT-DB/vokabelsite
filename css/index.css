@@ -32,16 +32,17 @@
     background-size: cover;
     transition: all .3s ease-in-out;
     background-repeat: no-repeat;
+    box-shadow: 0 0 25px #000000;
 }
 
 .lang a:hover, .lang a:focus {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 
 .eng{
     background-image: url(../pics/UnionJack.png);
 }
-.esp, .esp6{
+.esp, .esp6 {
     background-image: url(../pics/Spanishflag.svg);
 }
 .lat{
@@ -52,4 +53,16 @@
 }
 .rus{
     background-image: url(../pics/Russia.png);
+}
+
+.lang a h1 {
+    font-size: 30px;
+    background: #cccccc75;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 9px 5px #cccccc75;
 }

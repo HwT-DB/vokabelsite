@@ -27,9 +27,11 @@ function NewWord() {
                 console.log("err")
                 console.log(data)
             } else {
-                active_word = data.slice(1);
+                console.log(data)
+                let jsonData = JSON.parse(data)
+                active_word = jsonData.word;
                 word.value = active_word;
-                active_type = data[0];
+                active_type = jsonData.type;
             }
         } else {
             console.log("err")
@@ -53,17 +55,15 @@ function Check(translate) {
                     console.log("err")
                     console.log(data)
                 } else {    
-                    let jsonData = JSON.parse(data)
+                    let jsonData = JSON.parse(data);
                     if(jsonData.stat === "success") {
                         transl.style.border = "4px solid rgb(8, 138, 8)"
-                        check.classList.add("hide")
-                        cont.classList.remove("hide")
+                        End();
                     } else if(jsonData.stat === "fail") {
                         transl.style.border = "4px solid rgb(156, 10, 10)"
                         if(++error == max_errors) {
-                            errors.innerHTML = `${error}/${max_errors} - Good Answer: ${jsonData.good}`;
-                            check.classList.add("hide")
-                            cont.classList.remove("hide")
+                            errors.innerHTML = `${error}/${max_errors} - Richtige Lösung: ${jsonData.good}`;
+                            End();
                         } else {
                             errors.innerHTML = `${error}/${max_errors}`;
                         }
@@ -85,6 +85,12 @@ function Check(translate) {
         formData.append('type', parseInt(active_type));
         xhr.send(formData);
     }
+}
+
+function End() {
+    check.classList.add("hide")
+    cont.classList.remove("hide")
+    error = 0;
 }
 
 function Continue() {

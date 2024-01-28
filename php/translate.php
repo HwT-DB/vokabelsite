@@ -4,12 +4,15 @@
         "unit_eng" => "Unit ",
         "unit_esp" => "Unidad ",
 
-        "tasks_eng" => "Exercises",
-        "tasks_esp" => "Ejercicios",
+        "grade_eng" => "Grade ",
+        "grade_esp" => "Grade ",
 
-        "translate_eng" => "Translate",
-
-        "lang_eng" => "englisch",
+        "lang_eng" => "English",
+        "lang_esp" => "Español 4 años",
+        "lang_esp6" => "Español 6 años",
+        "lang_lat" => "Latin",
+        "lang_fr" => "Français",
+        "lang_rus" => "Русский",
     ];
 
 ?>

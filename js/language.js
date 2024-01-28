@@ -2,7 +2,28 @@ let lang = l;
 
 let grade = document.getElementById("grade");
 let unit = document.getElementById("unit");
-let unit_elements = document.getElementById("unit_elements");
+
+window.onload = function() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/grades.php", true);
+    xhr.onload = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            let data = xhr.response;
+            if (data === "err") {
+                console.log("err")
+                console.log(data)
+            } else {
+                grade.disabled = false;
+                grade.innerHTML = data;
+            }
+        } else {
+            console.log("err")
+        }
+    };
+    let formData = new FormData();
+    formData.append('lang', lang);
+    xhr.send(formData);
+}
 
 grade.oninput = function() {
     let xhr = new XMLHttpRequest();

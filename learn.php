@@ -30,7 +30,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo $translate["tasks_" . $lang]; ?></title>
+    <title>Aufgaben - <?php echo $translate['lang_' . $lang]; ?></title>
     <meta charset="UTF-8">
     <meta name="description" content="Vokabel Quiz">
     <meta name="author" content="Domonkos 'der Rambo vom Balaton' Rémai-Sleisz & Sophia Pilz">
@@ -40,15 +40,15 @@
 <body>
     <a href="./index.html" class="back">&lt; Zurück</a>
     <div class="box">
-        <p><b>HELFEN:</b><br>Übersetzen Sie die Wörter ins Deutsche bzw. aus dem Deutschen in die Sprache Ihrer Wahl<hr></p>
+        <p><b>HILFE:</b><br>Übersetzen Sie die Wörter ins Deutsche bzw. aus dem Deutschen in die Sprache Ihrer Wahl!<hr></p>
         <p><b>Sprache: <?php echo $translate['lang_' . $lang] ?></b></p>
         <input type="text" id="word" value="Szóóó" disabled>
         <hr>
-        <input type="text" id="translate" placeholder="<?php echo $translate['translate_' . $lang]; ?>...">
+        <input type="text" id="translate" placeholder="Übersetzung...">
         <br>
         <h3 id="errors">1/2</h3>
-        <button id="check" onclick="Check(document.getElementById('translate').value)">Check</button>
-        <button id="continue" class="hide" onclick="Continue()">&gt; Continue &gt;</button>
+        <button id="check" onclick="Check(document.getElementById('translate').value)">Abgabe</button>
+        <button id="continue" class="hide" onclick="Continue()">&gt; Weiter &gt;</button>
     </div>
 </body>
     <script>

@@ -12,7 +12,7 @@
     <head>
         <link rel="stylesheet" href="./css/langs.css">
         <title>
-            Vocab - English
+            Vokabeln - <?php echo $translate['lang_' . $lang]; ?>
         </title>
         <meta charset="UTF-8">
         <meta name="description" content="Vokabel Quiz">
@@ -25,16 +25,8 @@
             <h1>Choose a grade and a unit!</h1>
             <hr>
             <div class="inputs">
-                <select id="grade">
+                <select id="grade" disabled>
                     <option value="def" selected hidden>Choose a grade...</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
                 </select>
                 <select id="unit" disabled>
                     <option value="def" selected hidden>Choose a unit...</option>
