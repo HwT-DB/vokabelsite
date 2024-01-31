@@ -51,7 +51,7 @@
         <button id="continue" class="hide" onclick="Continue()">&gt; Weiter &gt;</button>
     </div>
     <h5 id="streak_c"></h5>
-    <button id="showCharacters">Speciális karakterek</button>
+    <button id="showCharacters">Sonderzeichen</button>
     <ul id="specialCharacters">
     <li>¿</li>
     <li>¡</li>
