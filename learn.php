@@ -50,6 +50,14 @@
         <button id="check" onclick="Check(document.getElementById('translate').value)">Abgabe</button>
         <button id="continue" class="hide" onclick="Continue()">&gt; Weiter &gt;</button>
     </div>
+    <h5 id="streak_c"></h5>
+    <button id="showCharacters">Speciális karakterek</button>
+    <ul id="specialCharacters">
+    <li>¿</li>
+    <li>¡</li>
+    <li>ñ</li>
+    <!-- Ide írhatod a további speciális karaktereket -->
+    </ul>
 </body>
     <script>
         let l = "<?php echo $lang; ?>";

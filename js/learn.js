@@ -1,6 +1,13 @@
 const max_errors = 2;
 let error = 0;
 
+let point = 0;
+
+let streak = 0;
+let highest_streak = localStorage.getItem("streak") > 0 ? localStorage.getItem("streak") : 0;
+
+let first_try = true;
+
 let lang = l;
 let grade = g;
 let unit = u;
@@ -11,6 +18,8 @@ let check = document.getElementById("check")
 let cont = document.getElementById("continue")
 let errors = document.getElementById("errors")
 let transl = document.getElementById("translate")
+let streak_c = document.getElementById("streak_c")
+streak_c.innerHTML = `Streak: 0<br>Highest Streak: ${highest_streak}`
 
 window.onload = function() {
     NewWord();
@@ -32,6 +41,7 @@ function NewWord() {
                 active_word = jsonData.word;
                 word.value = active_word;
                 active_type = jsonData.type;
+                first_try = true;
             }
         } else {
             console.log("err")
@@ -59,6 +69,14 @@ function Check(translate) {
                     if(jsonData.stat === "success") {
                         transl.style.border = "4px solid rgb(8, 138, 8)"
                         End();
+                        if (first_try == true) {
+                            streak++;
+                            if(streak > highest_streak) {
+                                localStorage.setItem("streak", streak);
+                                highest_streak = streak;
+                            }
+                            point++;
+                        }
                     } else if(jsonData.stat === "fail") {
                         transl.style.border = "4px solid rgb(156, 10, 10)"
                         if(++error == max_errors) {
@@ -66,11 +84,14 @@ function Check(translate) {
                             End();
                         } else {
                             errors.innerHTML = `${error}/${max_errors}`;
+                            first_try = false;
                         }
                         errors.style.display = "block";
+                        streak = 0;
                     } else {
                         console.log("err")
                     }
+                    streak_c.innerHTML = `Streak: ${streak}<br>Highest Streak: ${highest_streak}`;
                 }
             } else {
                 console.log("err")
@@ -101,3 +122,34 @@ function Continue() {
     check.classList.remove("hide");
     cont.classList.add("hide");
 }
+
+
+
+
+
+
+
+
+
+
+function insertTextAtCursor(text) {
+    var inputElement = transl;
+    var cursorPos = inputElement.selectionStart;
+    var textBefore = inputElement.value.substring(0, cursorPos);
+    var textAfter = inputElement.value.substring(cursorPos);
+    inputElement.value = textBefore + text + textAfter;
+    inputElement.setSelectionRange(cursorPos + text.length, cursorPos + text.length);
+    inputElement.focus();
+}
+
+document.getElementById('showCharacters').addEventListener('click', function () {
+    var specialCharacters = document.getElementById('specialCharacters');
+    specialCharacters.style.display = (specialCharacters.style.display === 'none' || specialCharacters.style.display === '') ? 'block' : 'none';
+});
+
+var specialCharacterList = document.getElementById('specialCharacters');
+specialCharacterList.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+        insertTextAtCursor(event.target.innerText);
+    }
+});

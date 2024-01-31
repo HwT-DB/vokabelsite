@@ -28,6 +28,16 @@ body {
     letter-spacing: 2px;
 }
 
+h5 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
 .box {
     width: 400px;
 }
@@ -111,4 +121,31 @@ body {
 
 .box button.hide {
     display: none;
+}
+
+#showCharacters {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#specialCharacters {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    column-count: 3;
+}
+
+#specialCharacters li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }

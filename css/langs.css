@@ -29,13 +29,13 @@ body {
 }
 
 .box {
-    width: 500px;
+    width: 492px;
 }
 
 .box h1 {
     text-align: center;
     color: #ccc;
-    font-size: 40px;
+    font-size: 38px;
     margin-bottom: 8px;
 }
 
@@ -71,6 +71,10 @@ body {
 }
 .box .inputs select:disabled:nth-child(2):hover {
     border-radius: 0 12px;
+}
+
+.box .inputs select:disabled {
+    cursor: no-drop;
 }
 
 .box button {
