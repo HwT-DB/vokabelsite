@@ -123,15 +123,6 @@ function Continue() {
     cont.classList.add("hide");
 }
 
-
-
-
-
-
-
-
-
-
 function insertTextAtCursor(text) {
     var inputElement = transl;
     var cursorPos = inputElement.selectionStart;

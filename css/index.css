@@ -65,4 +65,10 @@
     align-items: center;
     border-radius: 15px;
     box-shadow: 0 0 9px 5px #cccccc75;
+    transition: all .4s ease-in-out;
+}
+
+.lang a:hover h1 {
+    width: 100%;
+    height: 100%;
 }
