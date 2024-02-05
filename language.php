@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <a href="./index.html" class="back">&lt; Zurück</a>
+        <a href="./home.html" class="back">&lt; Zurück</a>
         <div class="box">
             <h1>Choose a grade and a unit!</h1>
             <hr>

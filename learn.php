@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="./css/learn.css">
 </head>
 <body>
-    <a href="./index.html" class="back">&lt; Zurück</a>
+    <a href="./home.html" class="back">&lt; Zurück</a>
     <div class="box">
         <p><b>HILFE:</b><br>Übersetzen Sie die Wörter ins Deutsche bzw. aus dem Deutschen in die Sprache Ihrer Wahl!<hr></p>
         <p><b>Sprache: <?php echo $translate['lang_' . $lang] ?></b></p>
