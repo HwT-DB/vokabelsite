@@ -61,6 +61,7 @@ function Check(translate) {
         xhr.onload = () => {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 let data = xhr.response;
+                console.log(data)
                 if (data === "err") {
                     console.log("err")
                     console.log(data)

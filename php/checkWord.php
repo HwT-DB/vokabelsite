@@ -19,6 +19,25 @@
             } else {
                 echo '{"stat": "fail", "good": "'. $w .'"}';
             }
+        } elseif (mysqli_num_rows($sql) > 1) {
+            $success = false;
+            $good = "";
+            $i = 0;
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $i++;
+                $w = $row['lang' . $type2];
+                if(strcmp($w, $ans) === 0) {
+                    $success = true;
+                } else {
+                    $good .= $w;
+                }
+                if($i != mysqli_num_rows($sql)) $good .= ' / ';
+            }
+            if($success) {
+                echo '{"stat": "success"}';
+            } else {
+                echo '{"stat": "fail", "good": "'. $good .'"}';
+            }
         } else {
             echo "err";
         }
