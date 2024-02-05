@@ -1,0 +1,74 @@
+@import url(./style.css);
+
+.main{
+    margin-top: 12px;
+}
+
+.main .title {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+
+.lang{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lang a {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 2%;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 25px #000000;
+}
+
+.lang a:hover, .lang a:focus {
+    transform: scale(1.07);
+}
+
+.eng{
+    background-image: url(../pics/UnionJack.png);
+}
+.esp, .esp6 {
+    background-image: url(../pics/Spanishflag.svg);
+}
+.lat{
+    background-image: url(../pics/VaticanCity.png);
+}
+.fr{
+    background-image: url(../pics/France.png);
+}
+.rus{
+    background-image: url(../pics/Russia.png);
+}
+
+.lang a h1 {
+    font-size: 30px;
+    background: #cccccc75;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 9px 5px #cccccc75;
+    transition: all .4s ease-in-out;
+}
+
+.lang a:hover h1 {
+    width: 100%;
+    height: 100%;
+}
