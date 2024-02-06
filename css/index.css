@@ -1,82 +1,57 @@
-@import url(./style.css);
+@import url(style.css);
 
-p{
+p, td {
     color: #ccc;
+    font-size: 16px;
+    text-align: center; 
 }
 
 td{
-    color: #ccc;
     padding: 9px;
-    text-align: center; 
-    font-size: 16px;
 }
 
 .warning{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.warning p{
-    margin-top: 25px;
+    display: block;
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    margin: auto;
+    margin-top: 25px;
     font-size: 20px;
-    background-color: yellow;
+    background: yellow;
     border-radius: 15px;
     padding: 20px;
     color: #333;
-    background-size: cover;
     box-shadow: 0 0 15px yellow;
 }
 
 .thanks{
     margin-top: 25px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
 .teach{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    margin: auto;
+    font-style: italic;
 }
 
-.home{
+.teach tr {
+    display: block;
+    margin: auto;
+}
+
+.home {
+    display: block;
+    width: 240px;
+    margin: auto;
+    text-align: center;
     margin-top: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    
-}
-
-.home a{
     color: #ccc;
     font-size: 23px;
-    background-color: #000000;
-    padding: 15px;
-    background-size: cover;
+    background: #000000;
+    padding: 15px 0;
     transition: all .3s ease-in-out;
-    background-repeat: no-repeat;
     border-radius: 15px;
     box-shadow: 0 0 25px #000000;
 }
 
-.home a:hover, .home a:focus {
+.home:hover, .home:focus {
     transform: scale(1.07);
 }
